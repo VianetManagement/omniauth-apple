@@ -48,6 +48,7 @@ module OmniAuth
       end
 
       def user_info
+        log(:info, "params: #{request.params}")
         return {} unless request.params['user'].present?
 
         log(:info, "user_info: #{request.params['user']}")
